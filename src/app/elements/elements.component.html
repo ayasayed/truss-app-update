@@ -1,0 +1,13 @@
+<div class="lab"><label style="color:#ffff;margin-top:7%;">Nodes Location</label></div>
+<div *ngFor="let item of members" class="input-group" >
+  <span class="input-group-addon" id="basic-addon3">N{{item}}</span>
+  <input type="text" class="form-control"id="mem"  value="" placeholder="location like x,y" #mem aria-describedby="basic-addon3" (keyup)="onEntern(mem.value,item)" required>
+</div>
+<br>
+<div class="lab"><label style="color:#ffff;margin-top:7%;padding: 3px;">Loads Values</label></div>
+<div *ngFor="let item of loads" class="input-group">
+  <span class="input-group-addon" id="basic-addon3">L{{item}}</span>
+  <input type="text" #load class="form-control" placeholder="enter +ve value" id="load" aria-describedby="basic-addon3" (keyup)="onEnterl(load.value,item)" required>
+</div>
+<br>
+<button style="margin-left:25%;color:#ffff; width:50%; margin-bottom: 10px;;font-size:20px; background-color:#d61d4e;margin-top:20px;"class="btn btn-bwm" type="submit"(click)="onsubmit()">solve</button>

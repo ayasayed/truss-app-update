@@ -1,0 +1,131 @@
+
+$main-color:#d61d4e;
+
+// .contain{
+//   width:700px;
+//   height:400px;
+//   margin: auto;
+//   margin-top:50px;
+//   vertical-align: center;
+//   border-radius: 50px;
+//   background-color: aquamarine;
+
+// }
+.welcome{
+  text-align:center;
+  font-size:50px;
+}
+.panel-default{
+width:100%;
+border:none;
+border-radius: 20px;
+margin-top:50px;
+
+background-color: #222831;
+
+color:#ffff;
+}
+.alert{
+  width:100%;
+  margin-left:-35%;;
+
+}
+.img-preview-container{
+  width:50%;
+  margin:auto;
+
+}
+input {
+  display: none;
+
+}
+
+.image-upload-container {
+  cursor: pointer;
+  margin-left:40%;
+  margin-top:20px;
+  margin-bottom: 20px;
+
+}
+
+.img-preview-container {
+  background-color: #222831;
+  position: relative;
+  margin-left: 43%;
+  .img-preview {
+    background: center center no-repeat;
+    background-size: contain;
+    height: 116px;
+    width: 116px;
+
+    &-error {
+      display: none;
+    }
+  }
+}
+
+.img-loading-overlay {
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    opacity: .2;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.img-spinning-circle {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.img-spinning-circle:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-bwm {
+  background-color:$main-color;
+  border-color:$main-color;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+
+  &:hover, &:focus, &:active {
+    border-color:$main-color !important;
+    background-color:$main-color !important;
+  }
+}
+
+@media(max-width: 700px){
+  .image-upload-container {
+
+    margin-left:27%;
+  }
+  .welcome{
+
+    font-size:20px;
+  }
+
+}
